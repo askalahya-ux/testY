@@ -16,7 +16,7 @@ jobs:
               echo '${{ secrets.DOTENV }}' >> .env
 
 
-        - name: Dowload File
+        - name: Download File
           run: node /app/download.js ${{ github.event.inputs.url }}
 
         - name: LS
