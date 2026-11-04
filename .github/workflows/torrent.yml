@@ -17,7 +17,7 @@ jobs:
 
 
         - name: Download File
-          run: transmission-cli "${{ github.event.inputs.url }}" -w /data
+          run: transmission-cli "${{ github.event.inputs.url }}" -w /data --exit
 
         - name: LS
           run: cd /data && ls -la
