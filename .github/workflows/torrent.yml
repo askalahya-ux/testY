@@ -17,7 +17,7 @@ jobs:
             echo '${{ secrets.DOTENV }}' >> .env
 
         - name: Download File
-          run: transmission-cli -w /data --exit "${{ github.event.inputs.url }}"
+          run: transmission-cli -w /data -sr 0 "${{ github.event.inputs.url }}"
 
         - name: LS & Check Files
           run: cd /data && ls -la
